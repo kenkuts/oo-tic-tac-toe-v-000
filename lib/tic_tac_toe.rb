@@ -68,7 +68,12 @@ class TicTacToe
   end
 
   def draw?
-    !(won?.is_a? Array) && full?
+    if won?.is_a? Array
+      false
+    elsif full?
+      puts "Cat's Game!"
+      true
+    end
   end
 
   def full?
@@ -84,7 +89,7 @@ class TicTacToe
       if @board[won?[0]] == "X"
         puts "Congratulations X!"
         return "X"
-      else 
+      else
         puts "Congratulations O!"
         return "O"
     end
