@@ -92,6 +92,7 @@ class TicTacToe
       else
         puts "Congratulations O!"
         return "O"
+      end
     end
     nil
   end
